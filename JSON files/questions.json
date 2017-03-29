@@ -1,0 +1,153 @@
+[
+  {
+  	"QuestionId": 1,
+    "QuestionValue": "Какую научную степень Вы получаете?",
+    "Answers": [
+      {
+        "AnswerValue": "Бакалавр",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "Магистр",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "Аспирант",
+        "AnswerId": 3
+      },
+      {
+        "AnswerValue": "Я самоучка",
+        "AnswerId": 4
+      },
+      {
+        "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 5
+      }
+    ]
+  },
+  {
+  	"QuestionId": 2,
+    "QuestionValue": "Кто вы по специальности?",
+    "Answers": [
+      {
+        "AnswerValue": "Инженер",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "Занимаюсь научной деятельностью",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 3
+      }
+    ]
+  },
+  {
+    "QuestionId": 3,
+    "QuestionValue": "Что вы хотите разработать",
+    "Answers": [
+      {
+        "AnswerValue": "Веб-приложение",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "Консольное приложение",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "Графическое приложение",
+        "AnswerId": 3
+      },
+      {
+        "AnswerValue": "Простая верстка",
+        "AnswerId": 4
+      },
+      {
+        "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 5
+      }
+
+    ]
+  },
+  {"QuestionId": 4,
+    "QuestionValue": "Какой у вас опыт программирования?",
+    "Answers": [
+      {
+        "AnswerValue": "новичок",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "бывалый",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "опытный",
+        "AnswerId": 3
+      },
+      {
+        "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 4
+      }
+    ]
+  },
+  {"QuestionId": 5,
+    "QuestionValue": "Какая парадигма программирования вам по душе?",
+    "Answers": [
+      {
+        "AnswerValue": "Объектно-ориентированный подход",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "Функциональное программирование",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "Паттерн MVC",
+        "AnswerId": 3
+      },
+      {
+        "AnswerValue": "Более одной парадигмы",
+        "AnswerId": 4
+      },
+      {
+        "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 5
+      }
+    ]
+  },
+  {"QuestionId": 6,
+    "QuestionValue": "Статическая или динамическая типизация?",
+    "Answers": [
+      {
+        "AnswerValue": "Динамическая типизация",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "статическая типизация",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 3
+      }
+    ]
+  },
+  {"QuestionId": 7,
+    "QuestionValue": "Вам нужна технология:",
+    "Answers": [
+      {
+        "AnswerValue": "Мощная и гибкая для создания больших систем",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "Простая и не использующая больших объемов данных",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 3
+      }
+    ]
+  }
+]
