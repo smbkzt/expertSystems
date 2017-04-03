@@ -36,9 +36,11 @@ class JsonParser:
 
         for x in self.__parsed_string:
             matches = 0
+            count = 0
             for y in x['tags']:
+                count += 1
                 for ans in self.__user_answers:
-                    if ans == y:
+                    if str(ans).lower() == str(y).lower():
                         matches += 1
                     else:
                         continue
@@ -47,7 +49,7 @@ class JsonParser:
 
             if matches > 0:
                 technology = x['technology']
-                self.matching_technologies[matches] = technology
+                self.matching_technologies[round(matches/count, 2)] = technology
 
     def print_matching_tech(self):
         print()

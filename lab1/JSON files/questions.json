@@ -1,49 +1,5 @@
 [
   {
-  	"QuestionId": 1,
-    "QuestionValue": "Какую научную степень Вы получаете?",
-    "Answers": [
-      {
-        "AnswerValue": "Бакалавр",
-        "AnswerId": 1
-      },
-      {
-        "AnswerValue": "Магистр",
-        "AnswerId": 2
-      },
-      {
-        "AnswerValue": "Аспирант",
-        "AnswerId": 3
-      },
-      {
-        "AnswerValue": "Я самоучка",
-        "AnswerId": 4
-      },
-      {
-        "AnswerValue": "Ничего из вышеперечисленного",
-        "AnswerId": 5
-      }
-    ]
-  },
-  {
-  	"QuestionId": 2,
-    "QuestionValue": "Кто вы по специальности?",
-    "Answers": [
-      {
-        "AnswerValue": "Инженер",
-        "AnswerId": 1
-      },
-      {
-        "AnswerValue": "Занимаюсь научной деятельностью",
-        "AnswerId": 2
-      },
-      {
-        "AnswerValue": "Ничего из вышеперечисленного",
-        "AnswerId": 3
-      }
-    ]
-  },
-  {
     "QuestionId": 3,
     "QuestionValue": "Что вы хотите разработать",
     "Answers": [
@@ -67,22 +23,22 @@
         "AnswerValue": "Ничего из вышеперечисленного",
         "AnswerId": 5
       }
-
     ]
   },
-  {"QuestionId": 4,
+  {
+    "QuestionId": 4,
     "QuestionValue": "Какой у вас опыт программирования?",
     "Answers": [
       {
-        "AnswerValue": "новичок",
+        "AnswerValue": "Новичок",
         "AnswerId": 1
       },
       {
-        "AnswerValue": "бывалый",
+        "AnswerValue": "Бывалый",
         "AnswerId": 2
       },
       {
-        "AnswerValue": "опытный",
+        "AnswerValue": "Опытный",
         "AnswerId": 3
       },
       {
@@ -91,7 +47,8 @@
       }
     ]
   },
-  {"QuestionId": 5,
+  {
+    "QuestionId": 5,
     "QuestionValue": "Какая парадигма программирования вам по душе?",
     "Answers": [
       {
@@ -116,7 +73,8 @@
       }
     ]
   },
-  {"QuestionId": 6,
+  {
+    "QuestionId": 6,
     "QuestionValue": "Статическая или динамическая типизация?",
     "Answers": [
       {
@@ -124,7 +82,7 @@
         "AnswerId": 1
       },
       {
-        "AnswerValue": "статическая типизация",
+        "AnswerValue": "Статическая типизация",
         "AnswerId": 2
       },
       {
@@ -133,7 +91,9 @@
       }
     ]
   },
-  {"QuestionId": 7,
+
+  {
+    "QuestionId": 7,
     "QuestionValue": "Вам нужна технология:",
     "Answers": [
       {
@@ -146,6 +106,24 @@
       },
       {
         "AnswerValue": "Ничего из вышеперечисленного",
+        "AnswerId": 3
+      }
+    ]
+  },
+  {
+    "QuestionId": 8,
+    "QuestionValue": "Синтаксис языка: ",
+    "Answers": [
+      {
+        "AnswerValue": "Максимально простой",
+        "AnswerId": 1
+      },
+      {
+        "AnswerValue": "Сложный по хардкорду",
+        "AnswerId": 2
+      },
+      {
+        "AnswerValue": "Не имеет значения",
         "AnswerId": 3
       }
     ]
