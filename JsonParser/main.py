@@ -6,37 +6,37 @@ import time
 
 
 class JsonParser:
+    '''Main class of json Parser'''
     def __init__(self):
+        '''Just initializes variables'''
         self.__parsed_string = ''
         self.__user_answers = []
         self.matching_technologies = {}
 
-    # Функция для парсинга json файла
     def open_file(self, path):
+        '''Initialize a parsed string data'''
         string_to_parse = ''
         with io.open(path, encoding='utf-8') as json_file:
             for line in json_file:
                 string_to_parse += line
         self.__parsed_string = json.loads(string_to_parse)
 
-    # Парсим "базу знаний"
     def parse_question_file(self, path='JSON files/questions.json'):
+        '''Parsing a question file to ask user'''
         self.open_file(path=path)
 
         for element in self.__parsed_string:
             print("____________________________")
             print(element['QuestionValue'])
 
-            # Выводим варианты ответов
-            for subelement in element['Answers']:
-                print("{0}: {1}".format(subelement['AnswerId'], subelement['AnswerValue']))
+            for sub_element in element['Answers']:
+                print("{0}: {1}".format(sub_element['AnswerId'], sub_element['AnswerValue']))
 
-            # Получаем ответы пользователя
             user_answer = input("Ответ: ")
 
-            # Записываем ответы пользователя в "лист""          
             # Сокращенная версия кода ниже
-            self.__user_answers.extend(answer['AnswerValue'] for answer in element['Answers'] if str(answer['AnswerId']) == user_answer)
+            self.__user_answers.extend(answer['AnswerValue'] for answer in element['Answers'] \
+                if str(answer['AnswerId']) == user_answer)
             # for yx in x['Answers']:
             #     if str(yx['AnswerId']) == str(answer):
             #         self.__user_answers.append(yx['AnswerValue'])
@@ -48,6 +48,7 @@ class JsonParser:
         print('------------------------------')
 
     def parse_answer_file(self, path='JSON files/answer.json'):
+        '''Parsing an answer file to compare user's answers with rating system'''
         self.open_file(path)
         for element in self.__parsed_string:
             matches = 0
@@ -67,6 +68,7 @@ class JsonParser:
                 self.matching_technologies[matches] = technology
 
     def print_matching_tech(self):
+        '''This method prints found technology'''
         print("")
         print("Подбираю Наиболее подходящие технологии...")
         print("")
@@ -76,7 +78,8 @@ class JsonParser:
         print("")
         time.sleep(0.5)
         for number in self.matching_technologies:
-            print("Технология - {0}, коэфициент совпадения - {1}".format(self.matching_technologies[number], number))
+            print("Технология - {0}, коэфициент совпадения - {1}"\
+                .format(self.matching_technologies[number], number))
             time.sleep(.5)
 
         print("")
