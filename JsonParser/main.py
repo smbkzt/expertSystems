@@ -88,7 +88,6 @@ class JsonParser:
 
 if __name__ == "__main__":
     variable = JsonParser()
-    _path = input("Введите путь к файлу или оставтье это поле пустым: ")
     variable.parse_question_file()
     variable.parse_answer_file()
     variable.print_matching_tech()
