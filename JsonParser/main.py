@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
+'''Json parser'''
 import io
 import json
 import time
@@ -90,7 +91,7 @@ class JsonParser:
 
 
 if __name__ == "__main__":
-    variable = JsonParser()
-    variable.parse_question_file()
-    variable.parse_answer_file()
-    variable.print_matching_tech()
+    JsonParser = JsonParser()
+    JsonParser.parse_question_file()
+    JsonParser.parse_answer_file()
+    JsonParser.print_matching_tech()
