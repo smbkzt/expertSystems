@@ -11,7 +11,7 @@ class JsonParser:
         self.__user_answers = []
         self.matching_technologies = {}
 
-    # Функция для парсинга json файлов
+    # Функция для парсинга json файла
     def open_file(self, path):
         string_to_parse = ''
         with io.open(path, encoding='utf-8') as json_file:
