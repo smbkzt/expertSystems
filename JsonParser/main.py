@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
 import io
 import json
 import time
@@ -12,8 +14,8 @@ class JsonParser:
     # Функция для парсинга json файлов
     def open_file(self, path):
         string_to_parse = ''
-        with io.open(path, encoding='utf-8') as file:
-            for line in file:
+        with io.open(path, encoding='utf-8') as json_file:
+            for line in json_file:
                 string_to_parse += line
         self.__parsed_string = json.loads(string_to_parse)
 
@@ -30,11 +32,11 @@ class JsonParser:
                 print("{0}: {1}".format(subelement['AnswerId'], subelement['AnswerValue']))
 
             # Получаем ответы пользователя
-            user_answer = int(input("Ответ: "))
+            user_answer = input("Ответ: ")
 
             # Записываем ответы пользователя в "лист""          
             # Сокращенная версия кода ниже
-            self.__user_answers.extend(answer['AnswerValue'] for answer in element['Answers'] if int(answer['AnswerId']) == user_answer)
+            self.__user_answers.extend(answer['AnswerValue'] for answer in element['Answers'] if str(answer['AnswerId']) == user_answer)
             # for yx in x['Answers']:
             #     if str(yx['AnswerId']) == str(answer):
             #         self.__user_answers.append(yx['AnswerValue'])
@@ -53,45 +55,40 @@ class JsonParser:
             for tags in element['tags']:
                 count += 1
                 for ans in self.__user_answers:
-                    if str(ans).lower() == str(tags).lower():
+                    if ans == tags == "Веб-приложение":
+                        matches += 10
+                    elif str(ans).lower() == str(tags).lower():
                         matches += 1
                     else:
                         continue
-                    if ans == tags == "Веб-приложение":
-                        matches += 10
 
             if matches > 0:
                 technology = element['technology']
-                self.matching_technologies[round(matches/count, 2)] = technology
+                self.matching_technologies[matches] = technology
 
     def print_matching_tech(self):
-        print()
+        print("")
         print("Подбираю Наиболее подходящие технологии...")
-        time.sleep(1)
-        print("...")
-        time.sleep(0.5)
-        print("...")
-        time.sleep(0.5)
-        print("...")
+        print("")
         time.sleep(1.5)
         print("------------------------------------")
         print("Все подходящие варианты: ")
-        print()
+        print("")
         time.sleep(0.5)
         for number in self.matching_technologies:
             print("Технология - {0}, коэфициент совпадения - {1}".format(self.matching_technologies[number], number))
-            print()
-            time.sleep(1)
+            time.sleep(.5)
 
+        print("")
         print("------------------------------------")
-        print("Оптимально подходящая технология для вас это: {0}".format(self.matching_technologies[max(self.matching_technologies)]))
-        print()
+        print("Оптимально подходящая технология для вас это: {0}".format(
+            self.matching_technologies[max(self.matching_technologies)]))
+        print("")
 
 
 if __name__ == "__main__":
     variable = JsonParser()
-    print("Введите путь к файлу или оставтье это поле пустым: ")
-    _path = input()
+    _path = input("Введите путь к файлу или оставтье это поле пустым: ")
     variable.parse_question_file()
     variable.parse_answer_file()
     variable.print_matching_tech()
